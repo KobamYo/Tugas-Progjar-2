@@ -46,9 +46,9 @@ class Server(threading.Thread):
 
 
 def main():
-    print("[SERVER] INIT")
+    print("Starting the Server...")
     svr = Server()
-    print("[SERVER] STARTED")
+    print("Server Started!")
     svr.start()
 
 
