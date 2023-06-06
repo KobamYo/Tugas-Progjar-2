@@ -6,6 +6,7 @@ def sendData():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     logging.basicConfig(format='%(message)s', level=logging.WARNING)
     server_address = ('0.0.0.0', 45000)
+    logging.warning("++++++++++++++++++++++++ START ++++++++++++++++++++++++")
     logging.warning(f"[OPEN SOCKET]\t {server_address}")
     sock.connect(server_address)
 
@@ -23,10 +24,10 @@ def sendData():
             logging.warning(f"[MENERIMA]\t {data}")
     finally:
         logging.warning("[CLOSE SOCKET]")
-        logging.warning("================================================")
+        logging.warning("++++++++++++++++++++++++ SENT ++++++++++++++++++++++++\n\n")
         sock.close()
     return
 
 if __name__=='__main__':
     for i in range(1,10):
-        senData()
+        sendData()
