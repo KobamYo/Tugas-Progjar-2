@@ -2,10 +2,10 @@ import sys
 import socket
 import logging
 
-def sendData():
+def kirim_data():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     logging.basicConfig(format='%(message)s', level=logging.WARNING)
-    server_address = ('0.0.0.0', 45000)
+    server_address = ('localhost', 45000)
     logging.warning("++++++++++++++++++++++++ START ++++++++++++++++++++++++")
     logging.warning(f"[OPEN SOCKET]\t {server_address}")
     sock.connect(server_address)
@@ -30,4 +30,4 @@ def sendData():
 
 if __name__=='__main__':
     for i in range(1,10):
-        sendData()
+        kirim_data()
